@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    x: <input v-model.number="position.x" type="text"><br>
+    y: <input v-model.number="position.y" type="text"><br>
+    type: <input type="radio" v-model="barrage.type" value="single">single <input type="radio" v-model="barrage.type" value="every">every <br>
+    repeat: <input type="number" v-model.number="barrage.repeat"><br>
+    interval: <input type="number" v-model.number="barrage.interval"><br>
+    dir_num: <input type="number" v-model.number="barrage.data.dir_num"><br>
+    spd: <input type="number" v-model.number="barrage.data.bullet.spd"><br>
+    rotationAccell: <input type="number" v-model.number="barrage.data.bullet.rotationAccell" step="0.01"><br>
+    alpha: <input type="radio" v-model="barrage.data.render.blendMode" value="ADD">add <input type="radio" v-model="barrage.data.render.blendMode" value="NORMAL">normal <br>
+    bullet: <input type="radio" v-model="barrage.data.render.texture.category" value="light">light <input type="radio" v-model="barrage.data.render.texture.category" value="rice">rice <br>
+    bullet_color: <input type="radio" v-model="barrage.data.render.texture.id" value="red">red <input type="radio" v-model="barrage.data.render.texture.id" value="blue">blue <input type="radio" v-model="barrage.data.render.texture.id" value="purple">purple<br>
+    <button @click="initGame">init</button>
+  </div>
+  <script>
+    var GLOBAL = {};
+  </script>
+  <script src="./barrage.js"></script>
+  <script src="./vue_bundle.js"></script>
+</body>
+</html>
